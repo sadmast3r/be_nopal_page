@@ -1,0 +1,253 @@
+/* styles.css */
+
+/* 1. Variables de CSS para Colores y Tipografía */
+:root {
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-gray: #808080;
+    --color-light-gray: #f5f5f5;
+    --color-dark-gray: #343a40;
+    --color-green-accent: #A6FF00; /* Puedes ajustar este color según prefieras */
+    --font-family: 'Roboto', sans-serif;
+}
+
+/* 2. Estilos Globales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-white);
+    color: var(--color-black);
+    line-height: 1.6;
+}
+
+/* 3. Encabezado y Navegación */
+.navbar .navbar-brand .logo {
+    max-width: 150px;
+    height: auto;
+}
+
+.navbar .nav-link {
+    color: var(--color-black) !important;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-green-accent) !important;
+}
+
+.icon-links .icon {
+    text-decoration: none;
+    color: var(--color-black);
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.icon-links .icon:hover {
+    color: var(--color-green-accent);
+}
+
+/* 4. Sección de Banner Promocional */
+.promo-banner {
+    background-color: var(--color-light-gray);
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    margin-top: 70px; /* Espacio para el navbar fijo */
+}
+
+.promo-banner p {
+    font-size: 0.9rem;
+    color: var(--color-gray);
+}
+
+/* 5. Sección de Nuevos Lanzamientos */
+.new-launches {
+    padding: 40px 0;
+}
+
+.new-launches h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: none;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 0.9rem;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--color-green-accent);
+    color: var(--color-white);
+    border-color: var(--color-green-accent);
+}
+
+.sort-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-options label {
+    font-size: 0.9rem;
+    color: var(--color-gray);
+}
+
+.sort-options select {
+    padding: 6px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.sort-options select:focus {
+    outline: none;
+    border-color: var(--color-green-accent);
+}
+
+/* 6. Cuadrícula de Productos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px); /* Columnas de 200px de ancho */
+    justify-content: center; /* Centra las columnas en el contenedor */
+    gap: 30px;
+}
+
+.product-card {
+    background-color: var(--color-white);
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px; /* Altura fija de 200px */
+    object-fit: cover; /* Cubre el contenedor manteniendo la proporción */
+}
+
+.product-info {
+    padding: 10px;
+    text-align: center;
+}
+
+.product-name {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: var(--color-black);
+}
+
+.product-price {
+    font-size: 0.9rem;
+    color: var(--color-gray);
+}
+
+/* 7. Pie de Página */
+footer.bg-dark {
+    background-color: var(--color-dark-gray) !important;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--color-white);
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--color-green-accent);
+    text-decoration: none;
+}
+
+/* 8. Responsividad */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .sort-options {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, 150px);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, 140px);
+        gap: 15px;
+    }
+
+    .product-image {
+        height: 150px;
+    }
+
+    .filter-buttons {
+        justify-content: center;
+    }
+
+    .sort-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sort-options label {
+        margin-bottom: 5px;
+    }
+}

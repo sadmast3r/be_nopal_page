@@ -1,0 +1,170 @@
+/* index.css */
+
+/* 1. Variables de CSS para Colores y Tipografía */
+:root {
+    --green-accent: #A6FF00; /* Verde claro como color de acento principal */
+    --white: #FFFFFF;         /* Blanco para texto y fondos */
+    --black: #000000;         /* Negro para texto */
+    --dark-green: #28a745;    /* Verde oscuro para botones y elementos resaltados */
+    --dark-text: #333333;      /* Texto en tono más oscuro para subtítulos */
+    --light-gray: #f8f9fa;    /* Gris claro para fondos secundarios */
+}
+
+/* 2. Estilos Globales */
+body {
+    font-family: 'Arial', sans-serif; /* Fuente sans-serif moderna */
+    color: var(--black);
+    background-color: var(--white);
+    margin: 0;
+    padding: 0;
+}
+
+/* 3. Navegación (Navbar) */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+}
+
+.nav-link {
+    color: var(--black) !important; /* Texto negro para enlaces */
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--green-accent) !important; /* Cambio de color en hover */
+}
+
+/* 4. Sección Hero */
+.hero-section {
+    background-color: var(--green-accent); /* Fondo verde claro */
+    height: 100vh; /* Altura completa de la ventana */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-align: center;
+    padding-top: 70px; /* Espacio para la navbar fija */
+}
+
+.hero-section h1 {
+    font-size: 3rem; /* Título grande */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.25rem; /* Subtítulo */
+    margin-bottom: 30px;
+}
+
+.hero-section .btn-primary {
+    background-color: var(--black); /* Botón negro */
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px; /* Esquinas redondeadas */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.hero-section .btn-primary:hover {
+    background-color: var(--dark-green); /* Cambio de color en hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra al hacer hover */
+}
+
+/* 5. Contenido Principal */
+main {
+    padding-top: 70px; /* Evitar contenido detrás de la navbar fija */
+}
+
+section {
+    padding: 60px 0; /* Espaciado superior e inferior */
+}
+
+section h2 {
+    font-size: 2.5rem; /* Títulos grandes en negrita */
+    font-weight: bold;
+    color: var(--black);
+    margin-bottom: 30px;
+}
+
+section p {
+    font-size: 1rem; /* Texto principal */
+    color: var(--dark-text);
+    margin-bottom: 20px;
+}
+
+section .btn-secondary {
+    background-color: var(--green-accent); /* Botones verdes */
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px; /* Esquinas redondeadas */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+section .btn-secondary:hover {
+    background-color: var(--dark-green); /* Cambio de color en hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra al hacer hover */
+}
+
+/* 6. Estilos para Imágenes */
+img {
+    border-radius: 15px; /* Marcos redondeados */
+    object-fit: cover;   /* Asegurar que las imágenes cubran el contenedor */
+}
+
+/* 7. Estilos para el Pie de Página (Footer) */
+footer {
+    background-color: var(--black); /* Fondo negro */
+    color: var(--white);
+}
+
+footer a {
+    color: var(--white);
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--green-accent); /* Cambio de color en hover */
+    text-decoration: none;
+}
+
+/* 8. Ajustes para Responsividad */
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto; /* Ajuste de altura en pantallas pequeñas */
+        padding: 60px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem; /* Reducir tamaño de fuente en pantallas pequeñas */
+    }
+
+    .hero-section p {
+        font-size: 1rem; /* Reducir tamaño de fuente en pantallas pequeñas */
+    }
+}
+
+/* 9. Efectos Hover para Todos los Botones */
+.btn {
+    border-radius: 25px; /* Esquinas redondeadas para todos los botones */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* 10. Espaciado para Secciones */
+section {
+    margin-bottom: 30px;
+    padding: 60px 0;
+}
+
+/* 11. Sombra para Cajas de Contenido */
+.section-content {
+    background-color: var(--light-gray);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    padding: 20px;
+    margin-bottom: 20px;
+}
